@@ -1,14 +1,16 @@
-function add(n1: number, n2: number, showResult: boolean, resultPhrase: string) {
+function add(n1: number | string , n2: number | string) {
+    let showResult;
     // if (typeof n1 !== 'number' || typeof n2 !== 'number') {
     //     throw new Error ('Incorrect input');
         
     // }
-    if(showResult){
-        console.log(resultPhrase + (n1+n2))
+   if (typeof n1 === 'number' && typeof n2 === 'number') {
+        showResult = n1 + n2;
+ 
+    } else {
+        showResult = n1.toString() + n2.toString();
     }
-    else {
-    return n1 + n2
-    }
+    return showResult
 }
 
 const numb1= 5;
@@ -16,7 +18,7 @@ const numb2= 2;
 const printResult = true; 
 const resultPhrase= 'Result is ';
 
-add(numb1, numb2, printResult, resultPhrase);
+console.log(add(numb1, numb2));
 
 // NOW OBJEST TYPES
 
