@@ -26,7 +26,18 @@ add(numb1, numb2, printResult, resultPhrase);
 //     age: number
 // } = {
     name: 'Naya',
-    age: 2
-};
+    age: 2,
+    hobbies: ['Sims', 'Playing dolls']
+}
 
-console.log(person.name);
+// ARRAY
+let favoriteActivities: string[];
+let AnyArrayNoTypes: any[]; // ["Sports", 1]
+
+favoriteActivities = ['Sports'];
+
+console.log(person.name, favoriteActivities);
+// for each hobby in the array of person
+for (const hobby of person.hobbies) {
+    console.log(hobby.toUpperCase())
+}
