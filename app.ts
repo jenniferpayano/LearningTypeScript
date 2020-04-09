@@ -43,23 +43,21 @@ for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase())
 }
 
-// Working with Tuples
-const person1: {
-        name: string;
-        age: number;
-        hobbies: string[];
-        role: [number, string];
-    } = {
+// Working with Tuples and enum
+
+enum Role {ADMIN= 'Admin', READ_ONLY= 23, AUTHOR= 200 };
+const person1 = {
         name: 'Naya',
         age: 6,
         hobbies: ['Sims', 'Playing dolls'],
-        role: [2, 'Kid']
+        role: Role.ADMIN
        
     };
 
 
-person1.role.push('admin')
+//person1.role.push('admin')
 //person1.role[1] = 10;
-person1.role = [0, 'admin'];
+//person1.role = [0, 'admin'];
 
 console.log(person1.role)
+
