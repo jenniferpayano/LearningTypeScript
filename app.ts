@@ -17,3 +17,16 @@ const printResult = true;
 const resultPhrase= 'Result is ';
 
 add(numb1, numb2, printResult, resultPhrase);
+
+// NOW OBJEST TYPES
+
+ const person = {
+// const person: {
+//     name: string,
+//     age: number
+// } = {
+    name: 'Naya',
+    age: 2
+};
+
+console.log(person.name);
