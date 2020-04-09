@@ -27,7 +27,8 @@ add(numb1, numb2, printResult, resultPhrase);
 // } = {
     name: 'Naya',
     age: 2,
-    hobbies: ['Sims', 'Playing dolls']
+    hobbies: ['Sims', 'Playing dolls'],
+   
 }
 
 // ARRAY
@@ -41,3 +42,24 @@ console.log(person.name, favoriteActivities);
 for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase())
 }
+
+// Working with Tuples
+const person1: {
+        name: string;
+        age: number;
+        hobbies: string[];
+        role: [number, string];
+    } = {
+        name: 'Naya',
+        age: 6,
+        hobbies: ['Sims', 'Playing dolls'],
+        role: [2, 'Kid']
+       
+    };
+
+
+person1.role.push('admin')
+//person1.role[1] = 10;
+person1.role = [0, 'admin'];
+
+console.log(person1.role)
